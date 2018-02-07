@@ -1,0 +1,317 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration: none
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*Div is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: crimson;
+	height: 20px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#mainHeader
+{
+	margin-top: 40px;
+	padding-bottom: 40px;
+	overflow: hidden; /*fixes colapsing parent*/
+	/*http://coding.smashingmagazine.com/2009/10/19/the-mystery-of-css-float-property/*/
+	border-bottom: solid 1px #DDD;
+}
+
+#logo
+{
+	width: 200px;
+	float: left;
+}
+
+#mainNavigationBar 
+{
+	float: right;
+	width: 500px;
+	margin-right: 50px;
+}
+
+#mainNavigationBar ul
+{
+	float: right;
+	list-style-type: none;
+	padding: 0px;
+	margin-right: 15px;
+	margin-top: 50px;
+}
+
+#mainNavigationBar ul li
+{
+	display: inline;
+	margin-left: 25px;
+}
+
+#mainNavigationBar ul li a
+{
+	color: red;
+	font-size: 15px;
+	padding: 0px;
+}
+
+.selected
+{
+	padding: 5px 5px 5px 5px; /*trbl*/
+	background-color: black;
+}
+
+#mainNavigationBar ul li a:hover
+{
+	background-color: #54d3e8;
+	padding: 2px;
+}
+
+
+
+
+
+
+#mainFooter 
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+#footerNav2
+{
+	float: left;
+	width: 450px;
+}
+
+#logoFooter
+{
+	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
+	
+}
+
+#socialMediaCon
+{
+	float: right;
+	width: 200px;
+	height: 60px;
+	margin-top: 20px;
+}
+
+#socialMediaCon p
+{
+	margin-top: 50px;
+}
+
+#iconNav
+{
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+}
+
+#iconNav li
+{
+	float: left;
+	margin-right: 10px;
+}
+
+#iconNav a
+{
+	display: block;
+	height: 45px;
+	width: 45px;
+}
+
+#footerNav
+{
+	clear: both;
+	margin-left: 25px;
+}
+
+#footerNav2 ul
+{
+	list-style: none;
+	padding: 0;
+	width: 500px;
+}
+
+#footerNav2 ul li
+{
+	display: inline;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+#footerNav2 ul li a
+{
+	color: red;
+}
+
+#footerNav2 ul li a:hover
+{
+	color: #0099b2;
+}
+
+
+
+
+
+
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+
+
+
+#contentCon {
+	margin-top: 40px;
+	overflow: hidden; /*fixes colapsing parent*/
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+#contentCon p
+{
+	margin-top: 5px;
+}
+
+#mainContact p
+{
+	font-size: 21px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+#contactArea
+{
+	width: 469px;
+	float: left;
+	border-right: solid 1px #ccc;
+	margin-bottom: 30px;
+}
+
+#contactArea p
+{
+	margin-right: 20px;
+}
+
+#mapArea
+{
+	float: left;
+	width: 360px;
+	margin-left: 40px;
+}
+
+input, textarea
+{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+	width: 300px;
+	height: 10px;
+	background-color: #efefef;
+	border: solid 1px #999;
+	color: #f37321;
+}
+
+#comments
+{
+	width: 360px;
+	height: 200px;
+}
+
+#submit
+{
+	width: 75px;
+	height: 30px;
+	background-color: #f27321;
+	padding: 5px 10px 5px 10px;
+	color: #fff;
+	margin-top: 30px;
+}
+
+#mapArea h3
+{
+	font-size: 21px;
+	color: #0099b2;
+}
+
+#mapArea ul
+{
+	list-style: none;
+	padding: 0;
+}
+
+#content1 
+{
+	float: left;
+	width: 440px;
+}
+
+#content2 
+{
+	float: right;
+	width: 440px;
+}
